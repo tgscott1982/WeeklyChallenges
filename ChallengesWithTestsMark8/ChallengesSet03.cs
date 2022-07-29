@@ -55,13 +55,27 @@ namespace ChallengesWithTestsMark8
 
         public int[] GetOddsBelow100()
         {
-            var oddsList = new List<int>();
+            //var oddsList = new List<int>();
+            //int[] myArray = new int[50];
+            //int index = 0;
+              
+            //  for (int i = 0; i < 100; i++)
+            //  {
+            //    if (i % 2 != 0)
+            //     {
+            //       myArray[index] = 1;
+            //       index++;
+            //     }
+            //  }
 
-            for (int i = 1; i < 100; i += 2)
-            {
-                oddsList.Add(i);
-            }
-            return oddsList.ToArray();
+
+            //for (int i = 1; i < 100; i += 2)
+            //{
+            //    oddsList.Add(i);
+            //}
+            //return oddsList.ToArray();
+
+            return Enumerable.Range(1, 100).Where(x => x % 2 != 0).ToArray();
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
