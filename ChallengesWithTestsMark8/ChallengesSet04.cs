@@ -56,26 +56,40 @@ namespace ChallengesWithTestsMark8
         public bool IsStringANumber(string input)
         {
             return double.TryParse(input, out var number);
+
         }
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
-            var nullAmount = 0;
-            var nonNull = 0;
+            return objs.Where(x => x == null).Count() > (objs.Count() / 2);
 
-            foreach (object _o in objs)
-            {
-                if (_o == null)
-                {
-                    nullAmount++;
-                }
-                else
-                {
-                    nonNull++;
-                }
-            }
-            return nullAmount > nonNull ? true : false;
-        }
+            //var nullAmount = 0;
+            //var nonNull = 0;
+
+            //foreach (object _o in objs)
+            //{
+            //    if (_o == null)
+            //    {
+            //        nullAmount++;
+            //    }
+            //    else
+            //    {
+            //        nonNull++;
+            //    }
+            //}
+            //return nullAmount > nonNull ? true : false;
+
+        //    var ojb = objs.Length;
+        //    var majority = (amount / 2) + 1;
+        //    var count = 0;
+        //    foreach ( var obj in objs)
+        //    {
+        //        if (obj == null)
+        //        {
+        //            count++;
+        //        }
+        //    }
+        }/*return count >=*/ 
 
         public double AverageEvens(int[] numbers)
         {
@@ -83,16 +97,18 @@ namespace ChallengesWithTestsMark8
         }
 
         public int Factorial(int number)
-        {
-            var factorial = 1;
-            if (number < 0)
-            {
-                throw new ArgumentOutOfRangeException();
+        {           
+            return number == 0 ? 1 : number * Factorial(number - 1);
 
-            }
-            for (int f = number; f > 0; f--)
-                factorial *= f;
-                    return factorial;
+            //var factorial = 1;
+            //if (number < 0)
+            //{
+            //    throw new ArgumentOutOfRangeException();
+
+            //}
+            //for (int f = number; f > 0; f--)
+            //    factorial *= f;
+            //        return factorial;
         }
     }
 }
