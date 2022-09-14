@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ChallengesWithTestsMark8
+namespace ChallengesWithTestsMark8  //adding comment to test new laptop
 {
     public class ChallengesSet01
     {
